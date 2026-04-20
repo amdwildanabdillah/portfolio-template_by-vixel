@@ -1,0 +1,104 @@
+===========================================================
+PANDUAN LENGKAP TEMPLATE PORTFOLIO "THE VISUAL"
+by Vixel Creative
+===========================================================
+
+Halo Kreator! Terima kasih telah memilih template portofolio dari Vixel Creative.
+Berikut adalah panduan lengkap cara mengedit isi website ini. Jangan panik saat melihat kode, semua sudah kami tandai dengan jelas. Ikuti perlahan langkah di bawah ini!
+
+-----------------------------------------------------------
+A. CARA MENGUBAH TEKS & BIODATA (PENTING!)
+-----------------------------------------------------------
+1. Buka file "index.html" menggunakan aplikasi Notepad atau Visual Studio Code.
+2. Gunakan fitur Pencarian dengan menekan tombol "Ctrl + F" di keyboard.
+3. Ketik tulisan "GANTI TEKS" di kolom pencarian. 
+4. Kamu akan langsung diarahkan ke bagian-bagian yang harus diganti, seperti:
+   - Nama Logo di pojok kiri atas.
+   - Profesi, Nama, dan Tagline di halaman depan.
+   - Paragraf biodata di bagian About.
+5. Cukup hapus teks bawaan kami, dan ketik teks kamu sendiri. JANGAN menghapus tanda kurung sudut seperti <p> atau <h1>.
+6. Simpan dengan menekan "Ctrl + S".
+
+-----------------------------------------------------------
+B. PERSIAPAN FILE GAMBAR & CV (BACA INI DULU!)
+-----------------------------------------------------------
+ATURAN PENAMAAN FILE (SANGAT PENTING AGAR WEB TIDAK ERROR/BLANK):
+Sistem website sangat sensitif terhadap spasi dan huruf besar. 
+❌ SALAH: "Foto Profil Aku.JPG" (Ada spasi & huruf besar)
+❌ SALAH: "Karya_Desain_100%!.png" (Ada simbol)
+✅ BENAR: "foto-profil-aku.jpg" atau "foto_profil_aku.jpg"
+✅ BENAR: "karya-desain-1.png"
+
+Pastikan SEMUA nama file (foto maupun CV) menggunakan HURUF KECIL, TANPA SPASI (ganti spasi dengan tanda strip "-" atau garis bawah "_"), dan TANPA SIMBOL.
+
+1. FOTO PROFIL: 
+   - Disarankan resolusi minimal 500x500 pixels. Bebas ukuran kotak atau panjang, karena sistem web akan otomatis membuatnya bulat sempurna.
+   - Format .jpg, .png, atau .webp.
+
+2. FOTO KARYA / THUMBNAIL VIDEO:
+   - Agar web cepat diakses, kompres foto kamu (maksimal 500KB per foto).
+   - Ukuran & Rasio: Bebas! Website ini dilengkapi sistem Auto-Crop 4:3. Foto panjang/lebar akan otomatis dirapikan menyesuaikan kotak grid.
+
+3. FILE CV: Siapkan file CV kamu dalam format .pdf.
+   
+PENTING: Pindahkan semua file Foto Profil, Foto Karya, dan File CV kamu yang sudah di-rename dengan benar ke dalam folder "assets". 
+(Khusus file gambar/foto, masukkan ke dalam folder "assets/img").
+
+-----------------------------------------------------------
+C. CARA MENGEDIT KARYA FOTOGRAFI & DESAIN
+-----------------------------------------------------------
+Di bagian Fotografi & Desain, ada dua gambar yang harus kamu ubah per karya: Thumbnail (gambar kecil) dan Gambar Besar (saat diklik).
+
+1. Cari bagian 2. Untuk mengubah Gambar Besar (saat foto diklik membesar), cari kode:
+   data-bs-img="link_gambar_besar_disini"
+   Ubah tulisan link di dalamnya dengan nama filemu. (Contoh: assets/img/fotoku.jpg)
+3. Untuk mengubah Thumbnail (gambar kecil di layar), cari kode di bawahnya: 
+   <img src="link_gambar_kecil_disini" alt="Karya Foto">
+   Ubah tulisan link di dalamnya dengan nama file yang sama.
+4. Ganti juga judul karya dan kategorinya pada baris "Judul Karya Foto 1".
+
+-----------------------------------------------------------
+D. CARA MENGEDIT KARYA VIDEOGRAFI (DARI YOUTUBE)
+-----------------------------------------------------------
+JANGAN PERNAH MENGUPLOAD FILE .MP4 KE DALAM FOLDER WEB! Itu akan membuat web sangat lambat. Sistem kita menggunakan YouTube Embed.
+
+Langkah mendapatkan Link Embed Video:
+1. Buka video YouTube kamu di browser.
+2. Klik tombol "Share" (Bagikan) di bawah video.
+3. Pilih menu "Embed" (Sematkan).
+4. Kamu akan melihat kode panjang. CARI teks yang ada di dalam src="...". 
+   Formatnya SELALU seperti ini: https://www.youtube.com/embed/KODE_VIDEO_KAMU
+5. Copy HANYA link tersebut.
+
+Langkah memasukkan ke website:
+1. Cari bagian di index.html.
+2. Cari kode: data-bs-video="link_youtube_disini"
+3. Ganti "link_youtube_disini" dengan link Embed yang baru kamu copy tadi.
+4. Jangan lupa ganti kode <img src="..."> di bawahnya dengan gambar thumbnail / cover videomu sendiri (ambil dari folder assets/img).
+
+-----------------------------------------------------------
+E. CARA MENGATUR IKON SOSIAL MEDIA & KONTAK
+-----------------------------------------------------------
+Di bagian paling bawah web (CONTACT SECTION), kami sudah menyediakan semua ikon sosial media lengkap (IG, TikTok, WA, LinkedIn, dll).
+1. Ketik "GANTI EMAIL" di fitur pencarian (Ctrl + F), lalu ubah "tulis_email_kamu_disini@gmail.com" jadi email aslimu.
+2. Untuk memasukkan link akun sosmedmu, ganti tanda pagar "#" pada href="#" menjadi link profile-mu. 
+   Contoh WA: href="https://wa.me/6281234567890"
+   Contoh IG: href="https://instagram.com/username_kamu"
+3. HAPUS BARIS KODE untuk ikon sosial media yang TIDAK KAMU MILIKI agar ikonnya hilang dari layar dan tampilan tetap bersih.
+
+-----------------------------------------------------------
+F. CARA ONLINE-KAN WEB (DEPLOY GRATIS)
+-----------------------------------------------------------
+1. Pastikan file "index.html" dan folder "assets" berada di dalam satu folder utama yang sama.
+2. Buka browser dan kunjungi website: https://app.netlify.com/drop
+3. Seret (drag and drop) folder utamamu tersebut, lalu lepas di dalam lingkaran pada website Netlify.
+4. Tunggu beberapa detik, web kamu sudah online dan mendapatkan link yang bisa disebar ke semua orang!
+
+===========================================================
+BINGUNG ATAU MAU TERIMA BERES?
+===========================================================
+Pusing ngeditnya? Butuh custom tampilan? Ingin ganti link pakai nama sendiri (.com / .my.id)? Atau sekalian di-hosting-in tanpa ribet?
+
+Kami siap membantu! Langsung hubungi kami:
+Website: vixelcreative.my.id
+===========================================================
